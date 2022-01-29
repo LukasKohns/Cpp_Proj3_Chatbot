@@ -26,21 +26,20 @@ void GraphNode::AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge)
     _childEdges.push_back(std::move(edge));
 }
 
-//// STUDENT CODE
+//// STUDENT CODE Changed Task 5
 ////
-void GraphNode::MoveChatbotHere(ChatBot *chatbot)
+void GraphNode::MoveChatbotHere(ChatBot chatbot)
 {
-    _chatBot = chatbot;
-    _chatBot->SetCurrentNode(this);
+    _chatBot = std::move(chatbot);
+    _chatBot.SetCurrentNode(this);
 }
 
 void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 {
-    newNode->MoveChatbotHere(_chatBot);
-    _chatBot = nullptr; // invalidate pointer at source
+    newNode->MoveChatbotHere(std::move(_chatBot));
+    //deleted because pointer is unique now
 }
-////
-//// EOF STUDENT CODE
+
 
 GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
 {

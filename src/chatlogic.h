@@ -24,9 +24,6 @@ private:
     // I believe this was only used for deletion which is now handled by smart pointer
     // std::vector<GraphEdge *> _edges;
 
-    ////
-    //// EOF STUDENT CODE
-
     // data handles (not owned)
     GraphNode *_currentNode;
     ChatBot *_chatBot;
