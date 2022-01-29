@@ -8,11 +8,7 @@ GraphNode::GraphNode(int id)
 
 GraphNode::~GraphNode()
 {
-    //// STUDENT CODE
-    ////
-
-    ////
-    //// EOF STUDENT CODE
+    //// STUDENT CODE Deleted
 }
 
 void GraphNode::AddToken(std::string token)
@@ -24,10 +20,10 @@ void GraphNode::AddEdgeToParentNode(GraphEdge *edge)
 {
     _parentEdges.push_back(edge);
 }
-
-void GraphNode::AddEdgeToChildNode(GraphEdge *edge)
+// Changed to accept unique pointer
+void GraphNode::AddEdgeToChildNode(std::unique_ptr<GraphEdge> edge)
 {
-    _childEdges.push_back(edge);
+    _childEdges.push_back(std::move(edge));
 }
 
 //// STUDENT CODE
@@ -48,11 +44,7 @@ void GraphNode::MoveChatbotToNewNode(GraphNode *newNode)
 
 GraphEdge *GraphNode::GetChildEdgeAtIndex(int index)
 {
-    //// STUDENT CODE
-    ////
+    //// STUDENT CODE Changed to work with unique pointer
 
-    return _childEdges[index];
-
-    ////
-    //// EOF STUDENT CODE
+    return _childEdges[index].get();
 }

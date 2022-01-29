@@ -20,8 +20,9 @@ private:
 
     ////EOC Task3
 
+    // STUDENT Changed Task 4
     // I believe this was only used for deletion which is now handled by smart pointer
-    std::vector<GraphEdge *> _edges;
+    // std::vector<GraphEdge *> _edges;
 
     ////
     //// EOF STUDENT CODE
