@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "chatgui.h"
+#include <memory>
 
 // forward declarations
 class ChatBot;
@@ -13,11 +14,13 @@ class GraphNode;
 class ChatLogic
 {
 private:
-    //// STUDENT CODE
-    ////
-
+    //// STUDENT Changed Task 3
     // data handles (owned)
-    std::vector<GraphNode *> _nodes;
+    std::vector<std::unique_ptr<GraphNode >> _nodes;
+
+    ////EOC Task3
+
+    // I believe this was only used for deletion which is now handled by smart pointer
     std::vector<GraphEdge *> _edges;
 
     ////
