@@ -42,9 +42,6 @@ ChatBot::~ChatBot()
     }
 }
 
-//// STUDENT Inserted
-//// Task 2 Rule of five
-
 // 2 : copy constructor
 ChatBot::ChatBot(const ChatBot &source)
 {
@@ -116,8 +113,6 @@ ChatBot &ChatBot::operator=(ChatBot &&source)
     return *this;
 
 }      
-////
-//// EOF STUDENT CODE
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {

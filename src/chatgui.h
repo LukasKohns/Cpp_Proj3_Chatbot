@@ -23,7 +23,7 @@ public:
     ChatBotPanelDialog(wxWindow *parent, wxWindowID id);
     ~ChatBotPanelDialog();
 
-    //// Student changed // getter / setter
+    //// changed // getter / setter
     ChatLogic *GetChatLogicHandle() { return _chatLogic.get(); }
 
     // events

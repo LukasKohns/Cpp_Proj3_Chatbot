@@ -114,9 +114,6 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     // allow for PNG images to be handled
     wxInitAllImageHandlers();
 
-    //// STUDENT Modified for use of unique_ptr
-    ////
-
     // create chat logic instance
     _chatLogic = std::make_unique<ChatLogic>(); 
 
@@ -129,13 +126,7 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     ////
 }
 
-ChatBotPanelDialog::~ChatBotPanelDialog()
-{
-    //// STUDENT Modified
-    //// I think this should be handled by the smart Pointer now
-
-    // delete _chatLogic;
-}
+ChatBotPanelDialog::~ChatBotPanelDialog(){}
 
 void ChatBotPanelDialog::AddDialogItem(wxString text, bool isFromUser)
 {

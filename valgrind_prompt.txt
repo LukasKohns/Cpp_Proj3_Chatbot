@@ -1,1 +1,0 @@
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=/home/lukas/Udacity_CPP/4_Memory_Management/CppND-Memory-Management-Chatbot/valgrind-out.txt /home/lukas/Udacity_CPP/4_Memory_Management/CppND-Memory-Management-Chatbot/build/membot
